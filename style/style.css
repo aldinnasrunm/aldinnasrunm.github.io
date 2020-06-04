@@ -12,6 +12,7 @@ header{
 }
 
 .welcome{
+    font-size: 30px;
     color: aliceblue;
     display: flex;
     justify-content: space-evenly;
