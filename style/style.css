@@ -25,7 +25,7 @@ header{
     position: relative;
     height: 250px;
     background-color:#2b2e4a;
-    border-radius: 0 0 0 80px;
+    border-radius: 0 0 80px 0 ;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -37,8 +37,8 @@ header{
 .welcome::before{
     top:50px;
     content: "";
-    background-color: #FFE53B;
-    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);    
+    background: linear-gradient(245deg, rgb(224, 35, 18), rgb(255, 117, 25), hsl(51, 100%, 52%), rgb(238, 80, 6), rgb(255, 0, 0)) 0% 0% / 500% 500%;
+    animation: AnimationName 14s ease infinite;   
     height: 230px;
     width: 100%;
     position: absolute;
@@ -47,7 +47,62 @@ header{
     border-radius: 0 0 0 5px;
 
 }
+/* webkit animation 4 background */
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 9%
+    }
 
+    50% {
+        background-position: 100% 92%
+    }
+
+    100% {
+        background-position: 0% 9%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 9%
+    }
+
+    50% {
+        background-position: 100% 92%
+    }
+
+    100% {
+        background-position: 0% 9%
+    }
+}
+
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 0% 9%
+    }
+
+    50% {
+        background-position: 100% 92%
+    }
+
+    100% {
+        background-position: 0% 9%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 9%
+    }
+
+    50% {
+        background-position: 100% 92%
+    }
+
+    100% {
+        background-position: 0% 9%
+    }
+}
 .welcome .profile{
     width: 150px;
     display: flex;
@@ -125,7 +180,7 @@ footer{
 /* tablet */
 @media screen and (max-width : 768px){
     .welcome {
-        border-radius:0 0 100px 0;
+        border-radius:0 0 80px 0;
         font-size: 18px;
     }
 
@@ -147,11 +202,11 @@ footer{
 @media screen and (max-width : 576px){
     .welcome {
         flex-direction: column-reverse;
-        border-radius:0 0 100px 0;
+        border-radius:0 0 65px 0;
         font-size: 14px;
     }
     .welcome h3{
-        padding-right: 0;
+        padding-right: 0px;
     }
 
     .profile img{
