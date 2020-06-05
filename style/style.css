@@ -4,13 +4,16 @@
 }
 body{
     background-color: #2b2e4a;
+    font-family: 'Montserrat', sans-serif;
+}
+body h1{
+    font-family: 'montaga', serif;
 }
 header{
     padding-top: 20px;
     color: aliceblue;
     text-align: center;
     background-color:#2b2e4a;
-
 }
 
 .welcome{
@@ -89,7 +92,7 @@ header{
     border-radius: 25px;
     align-items: center;
     flex-direction: column;
-    padding-bottom:50px;
+    padding :0 20px 50px 20px;
 }
 .container span .pjc{
     background-color: #686868;
@@ -106,6 +109,16 @@ header{
     color: #2b2e4a;
     text-decoration: none;
     text-align: center;
+}
+
+/* footer */
+footer{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    padding: 3px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #bbbbbb;
 }
 /* responsive  */
 
