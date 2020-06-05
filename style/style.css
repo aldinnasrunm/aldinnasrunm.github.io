@@ -22,9 +22,9 @@ header{
     position: relative;
     height: 250px;
     background-color:#2b2e4a;
-    border-radius:0 0 150px 0;
+    border-radius: 0 0 0 80px;
+    padding: 0 50px;
 }
-
 .welcome::before{
     top:50px;
     content: "";
@@ -35,6 +35,7 @@ header{
     position: absolute;
     display: block;
     z-index: -2;
+    border-radius: 0 0 0 5px;
 
 }
 
@@ -44,8 +45,9 @@ header{
     justify-content: center;
 }
 .profile img{
-    width: 150px;
+    width: 100%;
     border-radius: 150px;
+    filter: hue-rotate(-120deg);
 }
 .welcome .profile::before{
     content: " ";
@@ -90,14 +92,31 @@ header{
     margin: 40px auto;
     border-radius: 100px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 .container span a{
+    color: #2b2e4a;
+    text-decoration: none;
     text-align: center;
 }
 /* responsive  */
 
 @media screen and (max-width : 768px){
+    .welcome {
+        border-radius:0 0 100px 0;
+        font-size: 18px;
+    }
 
+    .profile img{
+        width: 80%;
+        border-radius: 130px;
+    }
+    .welcome .profile::before{
+        height: 140px;
+        width: 140px;
+    }
 }
 
 
@@ -105,10 +124,22 @@ header{
     .welcome {
         flex-direction: column-reverse;
         border-radius:0 0 100px 0;
+        font-size: 14px;
+    }
+
+    .profile img{
+        width: 70%;
+        border-radius: 100%;
+    }
+    .welcome .profile::before{
+        height: 110px;
+        width: 110px;
+        transform: translateY(-8px) translateX(-1px) ;
     }
 
     .container{
         flex-direction: column;
     
     }
+
 }
