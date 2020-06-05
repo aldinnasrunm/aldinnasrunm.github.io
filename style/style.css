@@ -24,7 +24,13 @@ header{
     background-color:#2b2e4a;
     border-radius: 0 0 0 80px;
     padding: 0 50px;
+    box-sizing: border-box;
 }
+
+.welcome h3{
+    padding-right: 50px;
+}
+
 .welcome::before{
     top:50px;
     content: "";
@@ -103,6 +109,7 @@ header{
 }
 /* responsive  */
 
+/* tablet */
 @media screen and (max-width : 768px){
     .welcome {
         border-radius:0 0 100px 0;
@@ -113,18 +120,25 @@ header{
         width: 80%;
         border-radius: 130px;
     }
+    .welcome h3{
+        padding-right: 20px;
+    }
     .welcome .profile::before{
-        height: 140px;
-        width: 140px;
+        height: 125px;
+        width: 125px;
+        transform: translateY(-8px);
     }
 }
 
-
+/* mobile */
 @media screen and (max-width : 576px){
     .welcome {
         flex-direction: column-reverse;
         border-radius:0 0 100px 0;
         font-size: 14px;
+    }
+    .welcome h3{
+        padding-right: 0;
     }
 
     .profile img{
