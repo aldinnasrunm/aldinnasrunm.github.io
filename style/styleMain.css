@@ -223,7 +223,7 @@ main section:nth-child(even) {
   position: absolute;
   font-size: 10em;
   color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 2px #0f54244b;
+  -webkit-text-stroke: 2px #0f542428;
 }
 #quote h1 {
   font-size: 3em;
@@ -249,6 +249,7 @@ main section:nth-child(even) {
 .iconSocial a {
   color: var(--gray-light);
   cursor: pointer;
+  font-size: 0.8em;
 }
 .iconSocial a:hover {
   color: var(--light-gren);
@@ -259,6 +260,7 @@ main section:nth-child(even) {
 
 /* footer styling */
 footer {
+  padding: 25px 0;
   text-align: center;
   background: var(--dark-green);
   font-size: 0.8em;
@@ -325,5 +327,9 @@ footer {
   }
   #about .iconSocial {
     width: 80%;
+    padding: 50px 0 0;
+  }
+  .iconSocial a {
+    font-size: 1em;
   }
 }
