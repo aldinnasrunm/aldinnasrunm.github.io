@@ -1,0 +1,329 @@
+:root {
+  --dark-black: #010101;
+  --dark-green: #0f5424;
+  --medium-gren: #138c38;
+  --light-green: #739e86;
+  --gray-black: #707372;
+  --gray-light: #b8c6bf;
+  --white-gray: #e8e9e8;
+
+  --header-gradient: linear-gradient(
+    0deg,
+    rgba(15, 84, 36, 1) 0%,
+    rgba(16, 95, 40, 1) 69%,
+    rgb(8, 104, 37) 100%
+  );
+
+  --shadow-min: 2px 4px 8px #01010136;
+}
+/* header styling */
+header {
+  background: var(--header-gradient);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 50px;
+  height: 100vh;
+  color: var(--white-gray);
+}
+header h1 {
+  font-size: 6em;
+}
+
+/* end of header styling */
+
+/* main styling */
+#profile {
+  background: var(--dark-green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 140vh;
+  padding: 0 10%;
+  box-sizing: border-box;
+  color: var(--white-gray);
+  line-height: 3em;
+}
+.textProfile h1 {
+  font-size: 3.5em;
+}
+.textProfile::before {
+  content: "PROFILE";
+  font-size: 10em;
+  left: 8%;
+  transform: translateY(-50px);
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.103);
+  position: absolute;
+}
+
+/* card styling */
+.picProfile {
+  border-radius: 20px;
+  height: 500px;
+  width: 350px;
+  background-image: url("../img/aldin-profile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  box-shadow: var(--shadow-min);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: backgroundDown 0.5s;
+}
+.picProfile.active {
+  background-size: 110%;
+  animation: backgroundUp 0.5s;
+}
+@keyframes backgroundUp {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 110%;
+  }
+}
+@keyframes backgroundDown {
+  from {
+    background-size: 110%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+.picProfile .subtitle {
+  width: 100%;
+  height: 150px;
+  background: var(--white-gray);
+  transform: translateY(350px);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8em;
+  color: rgb(112, 112, 112);
+}
+/*love button  */
+.picProfile .love {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  background: var(--white-gray);
+  transform: translateY(150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: var(--shadow-min);
+}
+.love img {
+  width: 50%;
+  opacity: 0.2;
+  filter: grayscale(1);
+  cursor: pointer;
+}
+.love img.active {
+  filter: grayscale(0);
+  opacity: 1;
+  transition: all 0.3s;
+}
+/* end of love button */
+/* end of card styling */
+section {
+  box-sizing: border-box;
+  padding: 50px 10%;
+}
+main section:nth-child(odd) {
+  background-color: var(--dark-green);
+  color: var(--white-gray);
+}
+main section:nth-child(even) {
+  background-color: var(--white-gray);
+  color: var(--gray-black);
+}
+/* product styling */
+#product {
+  padding: 30px 5%;
+  height: 300px;
+  display: grid;
+  grid-template-rows: 3.5em 75px 50px;
+  justify-content: center;
+  text-align: center;
+  grid-row-gap: 25px;
+  overflow: hidden;
+}
+#product h1 {
+  font-size: 3em;
+}
+#product .iconApp {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80vw;
+  position: relative;
+}
+#product .iconApp img {
+  width: 150%;
+}
+#product::before {
+  content: "TOOLS";
+  font-size: 10em;
+  position: absolute;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.082);
+  right: 50px;
+  transform: translateY(100px);
+}
+
+/* end of product styling */
+/* galery styling */
+#galery {
+  height: 500px;
+  background-image: url("../img/background.svg");
+}
+#galery::before {
+  content: "GAME";
+  font-size: 8em;
+  position: absolute;
+  color: rgba(240, 248, 255, 0);
+  -webkit-text-stroke: rgba(255, 238, 0, 0.856) 2px;
+}
+#galery #title {
+  text-align: center;
+  padding: 0 0 0.5em;
+  font-size: 4em;
+}
+
+#card {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.123);
+  margin: 0 20px;
+  padding: 100px;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+}
+
+/* end of galery styling */
+/* quote styling  */
+#quote {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  height: 400px;
+}
+#quote::before {
+  content: "START NOW";
+  position: absolute;
+  font-size: 10em;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 2px #0f54244b;
+}
+#quote h1 {
+  font-size: 3em;
+  color: var(--gray-black);
+}
+#quote span p {
+  font-size: 0.8em;
+  font-family: "Courier New", Courier, monospace;
+}
+/* end of quote styling */
+/* about styling */
+#about {
+  display: grid;
+  place-items: center;
+}
+#about .iconSocial {
+  width: 20%;
+  padding: 25px 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.iconSocial a {
+  color: var(--gray-light);
+  cursor: pointer;
+}
+.iconSocial a:hover {
+  color: var(--light-gren);
+}
+/* end of about styling */
+
+/* end of main styling */
+
+/* footer styling */
+footer {
+  text-align: center;
+  background: var(--dark-green);
+  font-size: 0.8em;
+}
+/* end of footer styling */
+
+/* responsive breakoint */
+@media screen and (max-width: 786px) {
+  /* header styling */
+  header h1 {
+    font-size: 4em;
+  }
+
+  /* profile styling */
+  #profile {
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+  }
+  .textProfile::before {
+    font-size: 6em;
+    left: 8%;
+    transform: translateY(-25px);
+  }
+
+  .picProfile {
+    height: 450px;
+    width: 325px;
+  }
+  /* product styling */
+  #product {
+    height: 225px;
+  }
+  #product::before {
+    font-size: 6em;
+    transform: translateY(75px);
+  }
+  #product .iconApp img {
+    width: 100%;
+  }
+  /* galery styling */
+  #galery::before {
+    font-size: 6em;
+    transform: translateY(50px);
+    left: -25px;
+  }
+  /* Quote styling */
+  #quote {
+    height: 300px;
+    overflow: hidden;
+  }
+  #quote h1 {
+    font-size: 2.6em;
+  }
+  #quote span p {
+    font-size: 0.7em;
+  }
+  #quote::before {
+    font-size: 4em;
+    left: -25px;
+    transform: translateY(125px);
+  }
+  /* about styling */
+  #about {
+  }
+  #about .iconSocial {
+    width: 80%;
+  }
+}

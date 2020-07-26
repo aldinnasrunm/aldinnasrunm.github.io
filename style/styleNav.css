@@ -1,0 +1,184 @@
+:root {
+  --dark-black: #010101;
+  --dark-green: #0f5424;
+  --medium-gren: #138c38;
+  --light-green: #739e86;
+  --gray-black: #707372;
+  --gray-light: #b8c6bf;
+  --white-gray: #e8e9e8;
+
+  --header-gradient: linear-gradient(
+    0deg,
+    rgba(15, 84, 36, 1) 0%,
+    rgba(16, 95, 40, 1) 69%,
+    rgb(8, 104, 37) 100%
+  );
+
+  --shadow-min: 2px 4px 8px #01010136;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: solid 0.5px rgba(255, 0, 0, 0.808);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  color: var(--white-gray);
+}
+
+/* navbar styling */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* padding: 20px 0; */
+  height: 100px;
+  align-items: center;
+  color: ;
+  position: absolute;
+  transform: translateY(-100px);
+  transition: all 0.5s;
+  z-index: 1;
+}
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  transform: translateY(0);
+  background: var(--dark-black);
+  transition: all 0.5s;
+}
+
+nav .logo {
+  font-family: cursive;
+  display: none;
+}
+nav.sticky .logo {
+  font-family: cursive;
+  display: inline;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 60%;
+  justify-content: space-between;
+  font-size: 1.2em;
+}
+nav.sticky ul {
+  width: 40%;
+  font-size: 0.8em;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--white-gray);
+}
+nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80%;
+  transition: all 0.5s;
+}
+nav.sticky ul li {
+  height: 50px;
+}
+nav ul li:hover {
+  background-color: var(--medium-gren);
+  font-weight: 400;
+  border-radius: 10px;
+  box-shadow: var(--shadow-min);
+}
+nav.sticky ul li:hover {
+  background-color: var(--light-green);
+}
+
+.menu-toggle {
+  display: none;
+  height: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: aliceblue;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -1px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+/* hamburger css animation  */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle span:last-child {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:last-child {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+/* end of navbar */
+/* RESPONSIVE BREAKPOINT */
+
+/* mini size */
+@media screen and (max-width: 786px) {
+  nav ul {
+    width: 80%;
+    font-size: 1.1em;
+  }
+
+  nav.sticky ul {
+    position: absolute;
+    flex-direction: column;
+    left: 100vw;
+    top: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    font-size: 1.2em;
+    transform: translateX(100%);
+    z-index: 0;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  nav ul.slide {
+    left: 0;
+    background-color: #000000;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .menu-toggle {
+    display: none;
+  }
+  nav.sticky .menu-toggle {
+    display: flex;
+  }
+}
