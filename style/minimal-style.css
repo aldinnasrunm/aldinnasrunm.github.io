@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+:root {
+   --gray-dark: #232323;
+   --gray-medium: #6c6c6c;
+   --gray-light: #cccccc;
+   --white-gray: #e8e9e8;
+   --blue-main: #0c73f0;
+   --dark: #263238;
+   --yellow-wow: #f19a0a;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   width: 100vw;
+   background-color: white;
+   font-family: "Poppins";
+   font-size: 22px;
+}
+
+#date {
+   font-family: "Source Code Pro", monospace;
+   padding: 0.2rem 1rem;
+}
+
+.pdef {
+   padding: 1.2rem;
+}
+
+.wrapper {
+   width: fit-content;
+   border-radius: 8px;
+   background-color: #0c73f00f;
+}
+.container {
+   width: 80vw;
+   margin: 0 auto;
+   background: #fff;
+}
+
+.flex-row {
+   flex-direction: row;
+}
+.flex-col {
+   flex-direction: column;
+}
+
+.w-full {
+   width: 100%;
+}
+
+.w-100 {
+   width: 100vw;
+}
+
+.flex {
+   display: flex;
+}
+
+.mx-auto {
+   margin: 0 auto;
+}
+
+/* text */
+
+.text-center {
+   text-align: center;
+}
+
+.text-dark {
+   color: var(--dark);
+}
+
+.text-gray-dark {
+   color: var(--gray-dark);
+}
+
+.text-gray-medium {
+   color: var(--gray-medium);
+}
+
+.text-gray-light {
+   color: var(--gray-light);
+}
+
+.text-blue-main {
+   color: var(--blue-main);
+}
+
+.text-yellow-wow {
+   color: var(--yellow-wow);
+}
+
+.text-sm {
+   font-size: 0.8rem;
+}
+
+.text-base {
+   font-size: 1rem;
+}
+
+.text-lg {
+   font-size: 1.5rem;
+}
+
+.text-xl {
+   font-size: 2rem;
+}
+
+.text-2xl {
+   font-size: 2.5rem;
+}
+
+.text-3xl {
+   font-size: 3rem;
+}
+
+.text-4xl {
+   font-size: 3.5rem;
+}
+
+.font-semibold {
+   font-weight: 500;
+}
+
+.font-bold {
+   font-weight: 600;
+}
